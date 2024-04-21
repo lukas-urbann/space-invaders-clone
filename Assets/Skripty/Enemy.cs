@@ -247,7 +247,7 @@ public class Enemy : MonoBehaviour {
 
     IEnumerator RandomDirection(float min, float max)
     {
-        //Nastavuje změnu směru nepřítele - v tomto případě používá pouze třída Normal a Tank
+        //Nastavuje změnu směru nepřítele - v tomto případě používá pouze třída Normal a Tank 
         float countdown = Random.Range(min, max);
         countdown -= Time.deltaTime;
 

@@ -40,7 +40,7 @@ public class Hrac : MonoBehaviour {
     public Text speedtext;
     public Text powertext;
     public Text cooldowntext;
-    public int laserprice = 1500, energyprice = 500, shieldprice = 1000, speedprice = 500, powerupprice = 500, cooldownprice = 750;
+    public int laserprice = 150, energyprice = 50, shieldprice = 100, speedprice = 50, powerupprice = 50, cooldownprice = 75;
     public float cooldownlaser = 0.5f, cooldownMax = 0.5f;
     private GameObject canvasShop;
     private bool shopOpen = false;
@@ -216,7 +216,7 @@ public class Hrac : MonoBehaviour {
         {
             credits -= energyprice;
             energymax += 10;
-            energyprice += (energyprice/2);
+            energyprice += (energyprice/2) * 2;
             GameObject.Find ("EnergyUpgrade/Text").GetComponent<Text>().text = " " +  energyprice;
         }        
     }
@@ -227,7 +227,7 @@ public class Hrac : MonoBehaviour {
         {
             credits -= shieldprice;
             hpmax += 10;
-            shieldprice += (shieldprice/2);
+            shieldprice += (shieldprice/2) * 2;
             GameObject.Find ("ShieldUpgrade/Text").GetComponent<Text>().text = " " +  shieldprice;
         }        
     }
@@ -238,7 +238,7 @@ public class Hrac : MonoBehaviour {
         {
             credits -= speedprice;
             speedhard += 0.5f;
-            speedprice += (speedprice/2);
+            speedprice += (speedprice/2) * 2;
             GameObject.Find ("SpeedUpgrade/Text").GetComponent<Text>().text = " " +  speedprice;
         }        
     }
@@ -249,7 +249,7 @@ public class Hrac : MonoBehaviour {
         {
             credits -= cooldownprice;
             cooldownMax -= 0.1f;
-            cooldownprice += (cooldownprice/2);
+            cooldownprice += (cooldownprice/2) * 2;
             GameObject.Find ("CooldownUpgrade/Text").GetComponent<Text>().text = " " +  cooldownprice;
         }        
     }
@@ -260,7 +260,7 @@ public class Hrac : MonoBehaviour {
         {
             credits -= powerupprice;
             bonusPowerUp += 1;
-            powerupprice += (powerupprice/2);
+            powerupprice += (powerupprice/2) * 2;
             GameObject.Find ("PowerupUpgrade/Text").GetComponent<Text>().text = " " +  powerupprice;
         }        
     }
@@ -271,7 +271,7 @@ public class Hrac : MonoBehaviour {
         {
             laserlevel++;
             credits -= laserprice;
-            laserprice += (laserprice/2);
+            laserprice += (laserprice/2) * 2;
             GameObject.Find ("LaserUpgrade/Text").GetComponent<Text>().text = " " +  laserprice;
             if(laserlevel == 3)
             {

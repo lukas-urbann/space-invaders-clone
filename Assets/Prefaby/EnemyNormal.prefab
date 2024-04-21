@@ -52,6 +52,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -148,7 +149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shootSpeedMin: 1
   shootSpeedMax: 2
-  hpMax: 5
+  hpMax: 3
   hpMin: 1
   canShoot: 0
   explosion: {fileID: 1507817529252008, guid: 5fe1c03fa99a9d3428903dabd7f14a7d, type: 3}
@@ -333,6 +334,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
